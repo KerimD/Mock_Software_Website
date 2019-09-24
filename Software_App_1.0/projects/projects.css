@@ -1,0 +1,104 @@
+/*
+    projects.css
+
+    IDEAS
+        -
+*/
+
+
+/*
+    1: remove default margin on everything
+*/
+* {
+    /* 1 */
+    margin: 0;
+}
+
+a {
+    /* removes underline from links */
+    text-decoration: none;
+}
+
+.site-wrap {
+    font-family: Arial;
+}
+
+/* HEADER ---------------------------------------------------------- */
+header {
+    background-color: rgb(0, 0, 100);
+    height: 100vh;
+    width: 100%;
+}
+
+.center-site-header {
+    margin: auto;
+    height: 5rem;
+    width: 70rem;
+}
+
+.site-logo {
+    width: 4rem;
+    height: 4rem;
+}
+
+.site-logo img {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    margin: .5rem;
+    float: left;
+}
+
+.site-nav {
+    width: auto;
+    height: auto;
+    float: right;
+    text-align: center;
+}
+
+.site-nav a {
+    color: white;
+    float: left;
+    padding: 2rem 0 0;
+    width: 7rem;
+    height: 3rem;
+    font-size: 20px; /* change to rem? */
+}
+
+.site-nav a:hover {
+    transition: background-color .8s ease, color .5s ease;
+
+    background-color: rgb(224, 224, 224);
+    color: blue;
+}
+
+.header-title {
+    color: white;
+    font-family: cursive;
+    text-align: center;
+    font-size: 5rem;
+    padding: 35vh 0;
+}
+
+
+/* MAIN ---------------------------------------------------------- */
+
+
+
+/* FOOTER ---------------------------------------------------------- */
+footer {
+    background-color: black;
+    color: white;
+    padding: 4rem 5rem 2rem;
+    height: 5rem;
+}
+
+footer div {
+    float: left;
+    padding-right: 8rem;
+}
+
+footer h3 {
+    margin-bottom: .7rem;
+    font-size: 22px;
+}

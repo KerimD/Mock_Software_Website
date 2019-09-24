@@ -1,0 +1,85 @@
+/*
+  Deniz Kerim
+*/
+/* TRIANGLES --------------------------- */
+.first-triangle {
+  background: white;
+}
+
+.first-triangle div {
+  height: 0;
+  width: 0;
+  border-top: 30px solid orange;
+  border-left: 100px solid white;
+  border-right: 100px solid white;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.second-triangle {
+  background: black;
+}
+
+.second-triangle div {
+  height: 0;
+  width: 0;
+  border-top: 30px solid white;
+  border-left: 100px solid black;
+  border-right: 100px solid black;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+/* CONTENT --------------------------- */
+.projects-content {
+  width: 300px;
+  padding: 2em 0 4em;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  grid-row-gap: 3em;
+}
+
+.projects-content .desc-1 h3,
+.projects-content .desc-2 h3,
+.projects-content .desc-3 h3 {
+  margin-bottom: 0.5em;
+}
+
+@media screen and (min-width: 750px) {
+  /* CONTENT --------------------------- */
+  .projects-content {
+    width: auto;
+    max-width: 1000px;
+  }
+  .projects-content .project-2 {
+    -ms-grid-column-align: right;
+        justify-self: right;
+  }
+  .projects-content .img-1,
+  .projects-content .img-3 {
+    float: left;
+    margin-right: 1em;
+  }
+  .projects-content .img-2 {
+    float: right;
+    margin-left: 1em;
+  }
+  .projects-content .desc-1,
+  .projects-content .desc-2,
+  .projects-content .desc-3 {
+    width: 700px;
+  }
+  .projects-content .desc-2 {
+    text-align: right;
+  }
+}
+/*# sourceMappingURL=projects.css.map */

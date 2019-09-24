@@ -1,0 +1,82 @@
+/*
+  Deniz Kerim
+*/
+
+$first-background: orange;
+$second-background: white;
+$third-background: lightblue;
+$last-background: black;
+
+/* TRIANGLES --------------------------- */
+.first-triangle {
+  background: $second-background;
+
+  div {
+    height: 0;
+    width: 0;
+    border-top: 30px solid $first-background;
+    border-left: 100px solid $second-background;
+    border-right: 100px solid $second-background;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.second-triangle {
+  background: $third-background;
+
+  div {
+    height: 0;
+    width: 0;
+    border-top: 30px solid $second-background;
+    border-left: 100px solid $third-background;
+    border-right: 100px solid $third-background;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.third-triangle {
+  background: $last-background;
+
+  div {
+    height: 0;
+    width: 0;
+    border-top: 30px solid $third-background;
+    border-left: 100px solid $last-background;
+    border-right: 100px solid $last-background;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+/* CONTENT --------------------------- */
+.about-us {
+  padding: 1em 6em 3em;
+  background: $second-background;
+
+  h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+}
+
+.squad {
+  padding: 2em 0;
+  background: $third-background;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 2em;
+  justify-content: center;
+
+  h5 {
+    color: red;
+  }
+}

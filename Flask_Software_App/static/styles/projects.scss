@@ -1,0 +1,89 @@
+/*
+  Deniz Kerim
+*/
+
+$first-background: orange;
+$second-background: white;
+$last-background: black;
+
+/* TRIANGLES --------------------------- */
+.first-triangle {
+  background: $second-background;
+
+  div {
+    height: 0;
+    width: 0;
+    border-top: 30px solid $first-background;
+    border-left: 100px solid $second-background;
+    border-right: 100px solid $second-background;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.second-triangle {
+  background: $last-background;
+
+  div {
+    height: 0;
+    width: 0;
+    border-top: 30px solid $second-background;
+    border-left: 100px solid $last-background;
+    border-right: 100px solid $last-background;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+/* CONTENT --------------------------- */
+.projects-content {
+  width: 300px;
+  padding: 2em 0 4em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: 3em;
+
+  .desc-1,
+  .desc-2,
+  .desc-3 {
+    h3 {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+@media screen and (min-width: 750px) {
+  /* CONTENT --------------------------- */
+  .projects-content {
+    width: auto;
+    max-width: 1000px;
+
+    .project-2 {
+      justify-self: right;
+    }
+
+    .img-1,
+    .img-3 {
+      float: left;
+      margin-right: 1em;
+    }
+
+    .img-2 {
+      float: right;
+      margin-left: 1em;
+    }
+
+    .desc-1,
+    .desc-2,
+    .desc-3 {
+      width: 700px;
+    }
+
+    .desc-2 {
+      text-align: right;
+    }
+  }
+}

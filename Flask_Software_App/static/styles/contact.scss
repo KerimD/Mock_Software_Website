@@ -1,0 +1,99 @@
+.cool-intro {
+  display: none;
+}
+
+body {
+  background: red;
+}
+
+.entice {
+  color: yellow;
+  width: 10em;
+  text-align: center;
+  margin: 1em auto;
+}
+
+.contact-form {
+  padding-top: 3em;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  font-size: 18px;
+
+  div {
+    position: relative;
+    margin: 0.3em 0;
+
+    label {
+      color: yellow;
+    }
+
+    input {
+      height: 1.7em;
+      color: yellow;
+      font-size: 16px;
+      background: red;
+      width: 33.5em;
+      border: none;
+      outline: none;
+
+      &::placeholder {
+        color: yellow;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: yellow;
+      top: -0.3em;
+      left: -1em;
+      width: 31em;
+      height: 1px;
+    }
+  }
+
+  .email {
+    input {
+      width: 30.5em;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: yellow;
+      top: -1em;
+      height: 31em;
+      left: -0.5rem;
+      width: 1px;
+    }
+  }
+
+  textarea {
+    background: red;
+    color: yellow;
+    font-size: 16px;
+    height: 27.5rem;
+    width: 33.5rem;
+    border: none;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+      color: yellow;
+    }
+  }
+
+  .submit {
+    width: 6em;
+    padding: 0.5em;
+    border: 1px solid yellow;
+    background: red;
+    color: yellow;
+  }
+}
+
+footer {
+  background: red;
+  color: yellow;
+}

@@ -1,0 +1,282 @@
+/*
+  Deniz Kerim
+*/
+
+$nav-color: red;
+$first-background: orange;
+$last-background: black;
+
+/* remove all margings and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  /* change font */
+}
+
+/* HEADER --------------------------- */
+header {
+  background: $nav-color;
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  img {
+    margin: 0.5em 0 0.3em;
+  }
+
+  .nav-toggle {
+    display: none;
+
+    &:checked ~ nav {
+      transform: scale(1, 1);
+
+      a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 300ms;
+      }
+    }
+  }
+
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    span,
+    span::before,
+    span::after {
+      display: block;
+      background: white;
+      height: 2px;
+      width: 2em;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    span::before,
+    span::after {
+      content: '';
+      position: absolute;
+    }
+
+    span::before {
+      bottom: 7px;
+    }
+
+    span::after {
+      top: 7px;
+    }
+  }
+
+  nav {
+    background: $nav-color;
+    width: 100%;
+    position: absolute;
+    text-align: left;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 1em;
+      margin-left: 1em;
+    }
+
+    a {
+      text-decoration: none;
+      color: orange;
+      position: relative;
+      opacity: 0;
+      transition: opacity 150ms ease-in-out;
+    }
+  }
+}
+
+/* MAIN --------------------------- */
+main .cool-intro {
+  background: $first-background;
+  height: 40vh;
+
+  .cool-intro-words {
+    position: relative;
+    width: 10em;
+    height: 10em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cool-intro-big {
+    position: absolute;
+    color: rgb(255, 59, 59);
+    font-size: 9rem;
+    top: -0.2em;
+    left: -1.7em;
+    opacity: 0.3;
+  }
+
+  .cool-intro-small {
+    position: absolute;
+    color: red;
+    font-size: 6rem;
+    top: 0.5em;
+    left: -1em;
+    opacity: 1;
+  }
+}
+
+/* TRIANGLES --------------------------- */
+.first-triangle {
+  background: $last-background;
+
+  div {
+    height: 0;
+    width: 0;
+    border-top: 30px solid $first-background;
+    border-left: 100px solid $last-background;
+    border-right: 100px solid $last-background;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+/* FOOTER --------------------------- */
+footer {
+  background: $last-background;
+  color: white;
+  padding: 3em 6em 3em;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, auto) 1fr;
+  grid-template-areas:
+    'phone . . .'
+    'email . . .'
+    'location . . .';
+
+  h3 {
+    margin-bottom: 0.5em;
+    font-size: 22px;
+  }
+
+  a {
+    color: white;
+  }
+
+  .phone {
+    grid-area: phone;
+  }
+
+  .email {
+    grid-area: email;
+  }
+
+  .location {
+    grid-area: location;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* HEADER --------------------------- */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 6fr) 1fr;
+
+    .logo {
+      grid-column: 2 / 3;
+    }
+
+    nav {
+      all: unset;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        margin-left: 2em;
+        margin-bottom: 0;
+      }
+
+      a {
+        opacity: 1;
+        font-size: 20px;
+        font-weight: 600;
+
+        &::after {
+          content: '';
+          position: absolute;
+          background: white;
+          top: 100%;
+          left: 0;
+          right: 0;
+          border-radius: 4px;
+          height: 4px;
+          transform-origin: left;
+          transform: scale(0, 1);
+          transition: transform ease 300ms;
+        }
+
+        &:hover::after {
+          transform: scale(1, 1);
+        }
+      }
+    }
+
+    .nav-toggle-label {
+      display: none;
+    }
+  }
+
+  /* MAIN --------------------------- */
+
+  /* FOOTER --------------------------- */
+  footer {
+    grid-template-areas:
+      'phone email location .'
+      'phone email location .'
+      'phone email location .';
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* HEADER --------------------------- */
+
+  /* MAIN --------------------------- */
+  main .cool-intro {
+    height: 80vh;
+
+    .cool-intro-words {
+      width: 30em;
+      height: 30em;
+    }
+
+    .cool-intro-big {
+      font-size: 14vw;
+      top: 5rem;
+      left: -10rem;
+    }
+
+    .cool-intro-small {
+      // change font-size to vw and top, left to rem
+      font-size: 9vw;
+      top: 12rem;
+      left: 6rem;
+    }
+  }
+
+  /* FOOTER --------------------------- */
+}

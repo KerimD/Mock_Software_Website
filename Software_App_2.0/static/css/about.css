@@ -1,0 +1,84 @@
+/*
+  Deniz Kerim
+*/
+/* TRIANGLES --------------------------- */
+.first-triangle {
+  background: white;
+}
+
+.first-triangle div {
+  height: 0;
+  width: 0;
+  border-top: 30px solid orange;
+  border-left: 100px solid white;
+  border-right: 100px solid white;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.second-triangle {
+  background: lightblue;
+}
+
+.second-triangle div {
+  height: 0;
+  width: 0;
+  border-top: 30px solid white;
+  border-left: 100px solid lightblue;
+  border-right: 100px solid lightblue;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.third-triangle {
+  background: black;
+}
+
+.third-triangle div {
+  height: 0;
+  width: 0;
+  border-top: 30px solid lightblue;
+  border-left: 100px solid black;
+  border-right: 100px solid black;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+/* CONTENT --------------------------- */
+.about-us {
+  padding: 1em 6em 3em;
+  background: white;
+}
+
+.about-us h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.about-us p {
+  font-size: 1.5em;
+}
+
+.squad {
+  padding: 2em 0;
+  background: lightblue;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (200px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.squad h5 {
+  color: red;
+}
+/*# sourceMappingURL=about.css.map */

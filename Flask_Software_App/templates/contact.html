@@ -1,0 +1,25 @@
+{% extends "layout.html" %} {% block stylesheet %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='styles/contact.css') }}"
+/>
+{% endblock %} {% block content %}
+
+<h1 class="entice">TALK TO US</h1>
+
+<form class="contact-form">
+    <div class="email">
+      <label for="Email">From: </label>
+      <input type="text" name="Email" id="Email" maxlength="60"></intput>
+    </div>
+    <div class="subject">
+      <input type="text" name="Subject" id="Subject" placeholder="Subject" maxlength="75"></intput>
+    </div>
+    <div class="content">
+      <textarea type="text" name="Content" id="Content" placeholder="Comments"></textarea>
+    </div>
+    <input class="submit" type="submit" value="Submit">
+</form>
+
+{% endblock %}
